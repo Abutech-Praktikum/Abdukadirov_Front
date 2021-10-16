@@ -1,5 +1,6 @@
 let typeButtons = document.querySelectorAll('.type-list-button');
 let playButtons = document.querySelectorAll('.play');
+let body = document.querySelector('body')
 let videoPlayers = document.querySelectorAll('.video-player')
 let slick = document.querySelectorAll('.slick-active');
 let activeMssage = document.querySelector('.btn-active');
@@ -9,13 +10,73 @@ let counter = document.querySelector('.count');
 let minutCount = document.querySelector('.minus-count');
 let plusCount = document.querySelector('.plus-count')
 let count = 0;
-let orderOpener = document.querySelector('#order-open');
+let orderOpener = document.querySelectorAll('.order-open');
 let orderCard = document.querySelector('.order-card')
 let closeOrder = document.querySelectorAll('.close-order');
 let shadow = document.querySelector('.shadow')
 let submitOrder = document.getElementById('submit-order');
 let activePart = document.querySelector('.active-card');
 let messagePart = document.querySelector('.message-part');
+let burgerButton = document.querySelector('.burger-btn');
+let burgerButtonImages = document.querySelectorAll('.burger-btn-img')
+let mobileMenu = document.querySelector('.mobile-menu');
+let toTopButton = document.querySelector('.to-top');
+
+
+
+
+
+window.addEventListener('load', function (e) {
+    e.preventDefault();
+    this.pageYOffset = 0;
+
+    fetch('http://localhost:4500/products')
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {
+            console.log(data);
+        });
+})
+
+function createProdict() {
+    let products = document.createElement('div');
+    let leftBox = document.createElement('div');
+    let rightBox = document.createElement('div');
+    let image = document.createElement('img');
+    products.setAttribute('class', 'card')
+    leftBox.setAttribute('class', 'img-section')
+    rightBox.setAttribute('class', 'info-section');
+    image.setAttribute('src', imgLink);
+    products.appendChild(leftBox, rightBox)
+    leftBox.appendChild(image);
+}
+
+window.addEventListener('scroll', function (e) {
+    e.preventDefault();
+    if (this.pageYOffset > 900) {
+        toTopButton.classList.add('active')
+    } else {
+        toTopButton.classList.remove('active')
+    }
+})
+
+burgerButton.addEventListener('click', function (e) {
+    e.preventDefault();
+    imageChanger()
+    mobileMenu.classList.toggle('active')
+})
+
+
+function imageChanger() {
+    burgerButtonImages.forEach(image => {
+        if (image.classList.contains('active')) {
+            image.classList.remove('active')
+        } else {
+            image.classList.add('active')
+        }
+    })
+}
 
 submitOrder.addEventListener('click', function (e) {
     e.preventDefault();
@@ -23,8 +84,8 @@ submitOrder.addEventListener('click', function (e) {
     messagePart.classList.add('active')
 })
 
-window.addEventListener('keydown', function(e) {
-    if(e.keyCode == 27){
+window.addEventListener('keydown', function (e) {
+    if (e.keyCode == 27) {
         orderCard.classList.remove('active');
         shadow.classList.remove('active')
         activePart.classList.remove('hidden')
@@ -32,12 +93,12 @@ window.addEventListener('keydown', function(e) {
     }
 });
 
-orderOpener.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    orderCard.classList.add('active')
-    shadow.classList.add('active')
-
+orderOpener.forEach(button => {
+    button.addEventListener('click', function (e) {
+        e.preventDefault();
+        orderCard.classList.add('active');
+        shadow.classList.add('active')
+    })
 })
 
 closeOrder.forEach(button => {
@@ -51,7 +112,7 @@ closeOrder.forEach(button => {
 })
 
 minutCount.addEventListener('click', function (e) {
-    e.preventDefault();utu
+    e.preventDefault();
     if (count == 0) {
         minutCount.setAttribute('disabled', 'true')
     } else {
@@ -85,10 +146,7 @@ function activeMessage() {
     formData.classList.remove('hidden')
 }
 
-window.addEventListener('load', function (e) {
-    e.preventDefault();
-    pageY = 0
-})
+
 
 playButtons.forEach(button => {
     button.addEventListener('click', function (e) {

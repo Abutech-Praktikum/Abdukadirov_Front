@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Matras || UZ</title>
+    <link rel="icon" href="./images/icons/logo-doc.svg">
     <link rel="stylesheet" href="./libs/slick-1.8.1/slick/slick.css">
     <link rel="stylesheet" href="./libs/slick-1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/media.css">
 
 <body>
     <div class="shadow ">
@@ -26,7 +28,7 @@
                     </div>
                     <div class="select-model">
                         <label for="model">Mahsulotlarni toifasini tanlang</label>
-                        <select name="" id="model">
+                        <select id="model">
                             <option value="model-a">Model A</option>
                             <option value="model-b">Model B</option>
                             <option value="model-c">Model C</option>
@@ -46,12 +48,55 @@
                 <h2>Arizangiz muvaffaqiyatli yuborildi</h2>
                 <img src="./images/cong.png" alt="">
                 <p>Tez orada operatorlarimiz siz bilan bog’lanishadi</p>
-                <button class="close-order" >Ok</button>
+                <button class="close-order">Ok</button>
             </div>
         </div>
     </div>
 
     <section class="intro" id="intro">
+        <header class="header-mobile">
+            <div class="container">
+                <a href="#">
+                    <img src="./images/icons/mobile-logo.svg" alt="">
+                </a>
+                <button class="burger-btn">
+                    <img src="./images/icons/burger-btn.svg" alt="" class="burger-btn-img active">
+                    <img src="./images/icons/x-btn.svg" alt="" class="burger-btn-img">
+                </button>
+            </div>
+        </header>
+        <div class="mobile-menu">
+            <div class="container">
+                <ul>
+                    <li>
+                        <a href="#">Katalog</a>
+                    </li>
+                    <li>
+                        <a href="#">Aksiya</a>
+                    </li>  
+                    <li>
+                        <a href="#">Biz haqimizda</a>
+                    </li>
+                    <li>
+                        <a href="#">Manzilimiz</a>
+                    </li>
+                    <li>
+                        <a href="#">Aloqa</a>
+                    </li>
+                </ul>
+                <button class="btn order-open">
+                    Buyurtma berish
+                </button>
+                <div class="phone-link">
+                    <div class="container">
+                        <a href="tel:998 90 123 45 67">
+                            <img src="./images/icons/phone.svg" alt="">
+                            +998 90 123 45 67
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <header class="header">
             <div class="container">
                 <div class="header-top">
@@ -82,7 +127,7 @@
                             <img src="./images/icons/phone.svg" alt="">
                             +998 90 123 45 67
                         </a>
-                        <button class="btn" id="order-open">
+                        <button class="btn order-open">
                             Buyurtma berish
                         </button>
                     </div>
@@ -538,6 +583,15 @@
             <div class="some-info">
                 <div class="line">
                     <div class="box">
+                        <h2>
+
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="some-info">
+                <div class="line">
+                    <div class="box">
                         <h2>Dream Cloud kompaniyasi haqida</h2>
                         <p>Penatibus viverra gravida rhoncus in. At turpis morbi ante tortor a est. Habitant adipiscing
                             ut sed pulvinar tellus, ut urna, fermentum:
@@ -650,7 +704,7 @@
     </section>
     <section class="save-number">
         <div class="container">
-            <div class="form-data">
+            <div class="form-data ">
                 <div class="left">
                     <h3>Sizni qiziqtirdimi?</h3>
                     <span>Raqamingizni qoldiring, biz sizga yana qo'ng'iroq qilamiz</span>
@@ -722,6 +776,9 @@
             </div>
         </div>
     </footer>
+    <a href="#intro" class="to-top">
+        <img src="./images/icons/arrow-top-light.svg" alt="">
+    </a>
     <script src="./libs/jquery.min.js"></script>
     <script src="./libs/slick-1.8.1/slick/slick.min.js"></script>
     <script src="./scripts/main.js"></script>
