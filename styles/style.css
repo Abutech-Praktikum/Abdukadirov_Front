@@ -553,8 +553,15 @@ body {
   max-width: 470px;
 }
 
+.card-wrapper .container .card .img-section img {
+  width: 464px;
+  height: 213px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .card-wrapper .container .card .info-section {
-  max-width: 640px;
+  width: 640px;
 }
 
 .card-wrapper .container .card .info-section .name {

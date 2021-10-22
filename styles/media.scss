@@ -159,8 +159,17 @@
     .card-wrapper {
         .container {
             .card {
+                .img-section{
+                    img{
+                        width: 288px;
+                        height: 133px;
+                        object-fit: cover;
+                    }
+                }
                 flex-direction: column;
-
+                .info-section{
+                    max-width: 100%;
+                }
                 .some-info {
                     .box {
                         width: 50%;

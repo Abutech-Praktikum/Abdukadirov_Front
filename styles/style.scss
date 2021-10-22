@@ -307,7 +307,7 @@ body {
             height: 500px;
 
             h1 {
-                width: 730px;
+                width: 700px;
                 font-weight: 800;
                 font-size: 90px;
                 color: #01384D;
@@ -460,10 +460,16 @@ body {
 
             .img-section {
                 max-width: 470px;
+
+                img {
+                    width: 464px;
+                    height: 213px;
+                    object-fit: cover;
+                }
             }
 
             .info-section {
-                max-width: 640px;
+                width: 640px;
 
                 .name {
                     font-weight: bold;

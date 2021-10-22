@@ -21,24 +21,20 @@
                 </button>
                 <form action="" class="order">
                     <h2>Buyurtma qilish</h2>
-                    <input type="text" class="name" placeholder="Ismingizni yozing">
+                    <input type="text" class="name send-name" placeholder="Ismingizni yozing">
                     <div class="number-wrapper">
                         <input type="text" class="code" placeholder="998" disabled>
-                        <input type="text" class="number" placeholder="Raqamingizni yozing">
+                        <input type="text" class="number send-phone" placeholder="Raqamingizni yozing">
                     </div>
                     <div class="select-model">
                         <label for="model">Mahsulotlarni toifasini tanlang</label>
                         <select id="model">
-                            <option value="model-a">Model A</option>
-                            <option value="model-b">Model B</option>
-                            <option value="model-c">Model C</option>
-                            <option value="model-d">Model D</option>
-                            <option value="model-e">Model E</option>
+                            <option value="disable" disabled selected>Choose your product..</option>
                         </select>
                     </div>
                     <div class="counter">
                         <button class="minus-count">-</button>
-                        <p class="count">0</p>
+                        <p class="count">1</p>
                         <button class="plus-count">+</button>
                     </div>
                     <button type="submit" class="submit" id="submit-order">Yuborish</button>
@@ -136,58 +132,21 @@
         </header>
         <div class="container">
             <div class="intro-slider">
-                <div class="slick-box">
-                    <h1>Kechalari sokin dam oling</h1>
-                    <img src="./images/slider.png" alt="">
-                    <a href="#pruducts" class="btn">
-                        Kategoriyalar
-                    </a>
-                </div>
-                <div class="slick-box">
-                    <h1>Kechalari sokin dam oling</h1>
-                    <img src="./images/slider.png" alt="">
-                    <a href="#pruducts" class="btn">
-                        Kategoriyalar
-                    </a>
-                </div>
-                <div class="slick-box">
-                    <h1>Kechalari sokin dam oling</h1>
-                    <img src="./images/slider.png" alt="">
-                    <a href="#pruducts" class="btn">
-                        Kategoriyalar
-                    </a>
-                </div>
-                <div class="slick-box">
-                    <h1>Kechalari sokin dam oling</h1>
-                    <img src="./images/slider.png" alt="">
-                    <a href="#pruducts" class="btn">
-                        Kategoriyalar
-                    </a>
-                </div>
+                <template id="slick-template">
+                    <div class="slick-box">
+                        <h1 class="slick-box-title ">Kechalari sokin dam oling</h1>
+                        <img class="slick-box-img" src="./images/slider.png" alt="">
+                        <a href="#pruducts" class="btn">
+                            Kategoriyalar
+                        </a>
+                    </div> 
+                </template>
             </div>
         </div>
     </section>
     <section class="statistics">
         <div class="container">
-            <ul class="wrapper">
-                <li class="box">
-                    <h2>7</h2>
-                    <span>yillik tajriba</span>
-                </li>
-                <li class="box">
-                    <h2>
-                        10k+
-                    </h2>
-                    <span>mamnun mijozlar</span>
-                </li>
-                <li class="box">
-                    <h2>10</h2>
-                    <span>yillik kafolat</span>
-                </li>
-                <li class="box">
-                    <h2>3</h2>
-                    <span>kunda yetkazish</span>
-                </li>
+            <ul class="wrapper" id="statistic-wrapper">
             </ul>
         </div>
     </section>
@@ -199,48 +158,8 @@
             <div class="container">
                 <ul class="type-list">
                     <li>
-                        <button class="type-list-button" data-btn-order="0">
+                        <button class="type-list-button active" data-btn-order="0">
                             Barchasi
-                        </button>
-                    </li>
-                    <li>
-                        <button class="type-list-button" data-btn-order="1">
-                            Model A+
-                        </button>
-                    </li>
-                    <li>
-                        <button class="type-list-button" data-btn-order="2">
-                            Model B+
-                        </button>
-                    </li>
-                    <li>
-                        <button class="type-list-button" data-btn-order="3">
-                            Model C
-                        </button>
-                    </li>
-                    <li>
-                        <button class="type-list-button " data-btn-order="4">
-                            Model C+
-                        </button>
-                    </li>
-                    <li>
-                        <button class="type-list-button" data-btn-order="5">
-                            Model D
-                        </button>
-                    </li>
-                    <li>
-                        <button class="type-list-button" data-btn-order="6">
-                            Model Yevro
-                        </button>
-                    </li>
-                    <li>
-                        <button class="type-list-button" data-btn-order="7">
-                            Yangi tovarlar
-                        </button>
-                    </li>
-                    <li>
-                        <button class="type-list-button" data-btn-order="8">
-                            Model A
                         </button>
                     </li>
                 </ul>
@@ -248,297 +167,18 @@
         </div>
     </section>
     <section class="card-wrapper">
-        <div class="container">
-            <div class="card">
-                <div class="img-section">
-                    <img src="./images/photo.png" alt="">
-                </div>
-                <div class="info-section">
-                    <h3 class="name">Ortopedik Eko matras</h3>
-                    <div class="some-info">
-                        <div class="box">
-                            <span>Yuklama</span>
-                            <h3>150 kg</h3>
-                        </div>
-                        <div class="box">
-                            <span>Kafolat</span>
-                            <h3>3 yil</h3>
-                        </div>
-                        <div class="box">
-                            <span>
-                                O’lchami
-                            </span>
-                            <h3>200x120x40</h3>
-                        </div>
-                        <div class="box">
-                            <span>Sig’imi</span>
-                            <h3>2 kishilik</h3>
-                        </div>
-                    </div>
-                    <p class="overview">Penatibus viverra gravida rhoncus in. At turpis morbi ante tortor a est.
-                        Habitant adipiscing ut
-                        sed pulvinar tellus, ut urna, fermentum. Porttitor senectus lorem rhoncus facilisi ac dictum
-                        varius egestas.
-                    </p>
-                    <div class="price">
-                        <span>Narxi</span>
-                        <h3>1 699 999 so'm</h3>
-                    </div>
-                    <button class="btn">
-                        Buyurtma berish
-                    </button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="img-section">
-                    <img src="./images/photo.png" alt="">
-                </div>
-                <div class="info-section">
-                    <h3 class="name">Ortopedik Eko matras</h3>
-                    <div class="some-info">
-                        <div class="box">
-                            <span>Yuklama</span>
-                            <h3>150 kg</h3>
-                        </div>
-                        <div class="box">
-                            <span>Kafolat</span>
-                            <h3>3 yil</h3>
-                        </div>
-                        <div class="box">
-                            <span>
-                                O’lchami
-                            </span>
-                            <h3>200x120x40</h3>
-                        </div>
-                        <div class="box">
-                            <span>Sig’imi</span>
-                            <h3>2 kishilik</h3>
-                        </div>
-                    </div>
-                    <p class="overview">Penatibus viverra gravida rhoncus in. At turpis morbi ante tortor a est.
-                        Habitant adipiscing ut
-                        sed pulvinar tellus, ut urna, fermentum. Porttitor senectus lorem rhoncus facilisi ac dictum
-                        varius egestas.
-                    </p>
-                    <div class="price">
-                        <span>Narxi</span>
-                        <h3>1 699 999 so'm</h3>
-                    </div>
-                    <button class="btn">
-                        Buyurtma berish
-                    </button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="img-section">
-                    <img src="./images/photo.png" alt="">
-                </div>
-                <div class="info-section">
-                    <h3 class="name">Ortopedik Eko matras</h3>
-                    <div class="some-info">
-                        <div class="box">
-                            <span>Yuklama</span>
-                            <h3>150 kg</h3>
-                        </div>
-                        <div class="box">
-                            <span>Kafolat</span>
-                            <h3>3 yil</h3>
-                        </div>
-                        <div class="box">
-                            <span>
-                                O’lchami
-                            </span>
-                            <h3>200x120x40</h3>
-                        </div>
-                        <div class="box">
-                            <span>Sig’imi</span>
-                            <h3>2 kishilik</h3>
-                        </div>
-                    </div>
-                    <p class="overview">Penatibus viverra gravida rhoncus in. At turpis morbi ante tortor a est.
-                        Habitant adipiscing ut
-                        sed pulvinar tellus, ut urna, fermentum. Porttitor senectus lorem rhoncus facilisi ac dictum
-                        varius egestas.
-                    </p>
-                    <div class="price">
-                        <span>Narxi</span>
-                        <h3>1 699 999 so'm</h3>
-                    </div>
-                    <button class="btn">
-                        Buyurtma berish
-                    </button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="img-section">
-                    <img src="./images/photo.png" alt="">
-                </div>
-                <div class="info-section">
-                    <h3 class="name">Ortopedik Eko matras</h3>
-                    <div class="some-info">
-                        <div class="box">
-                            <span>Yuklama</span>
-                            <h3>150 kg</h3>
-                        </div>
-                        <div class="box">
-                            <span>Kafolat</span>
-                            <h3>3 yil</h3>
-                        </div>
-                        <div class="box">
-                            <span>
-                                O’lchami
-                            </span>
-                            <h3>200x120x40</h3>
-                        </div>
-                        <div class="box">
-                            <span>Sig’imi</span>
-                            <h3>2 kishilik</h3>
-                        </div>
-                    </div>
-                    <p class="overview">Penatibus viverra gravida rhoncus in. At turpis morbi ante tortor a est.
-                        Habitant adipiscing ut
-                        sed pulvinar tellus, ut urna, fermentum. Porttitor senectus lorem rhoncus facilisi ac dictum
-                        varius egestas.
-                    </p>
-                    <div class="price">
-                        <span>Narxi</span>
-                        <h3>1 699 999 so'm</h3>
-                    </div>
-                    <button class="btn">
-                        Buyurtma berish
-                    </button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="img-section">
-                    <img src="./images/photo.png" alt="">
-                </div>
-                <div class="info-section">
-                    <h3 class="name">Ortopedik Eko matras</h3>
-                    <div class="some-info">
-                        <div class="box">
-                            <span>Yuklama</span>
-                            <h3>150 kg</h3>
-                        </div>
-                        <div class="box">
-                            <span>Kafolat</span>
-                            <h3>3 yil</h3>
-                        </div>
-                        <div class="box">
-                            <span>
-                                O’lchami
-                            </span>
-                            <h3>200x120x40</h3>
-                        </div>
-                        <div class="box">
-                            <span>Sig’imi</span>
-                            <h3>2 kishilik</h3>
-                        </div>
-                    </div>
-                    <p class="overview">Penatibus viverra gravida rhoncus in. At turpis morbi ante tortor a est.
-                        Habitant adipiscing ut
-                        sed pulvinar tellus, ut urna, fermentum. Porttitor senectus lorem rhoncus facilisi ac dictum
-                        varius egestas.
-                    </p>
-                    <div class="price">
-                        <span>Narxi</span>
-                        <h3>1 699 999 so'm</h3>
-                    </div>
-                    <button class="btn">
-                        Buyurtma berish
-                    </button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="img-section">
-                    <img src="./images/photo.png" alt="">
-                </div>
-                <div class="info-section">
-                    <h3 class="name">Ortopedik Eko matras</h3>
-                    <div class="some-info">
-                        <div class="box">
-                            <span>Yuklama</span>
-                            <h3>150 kg</h3>
-                        </div>
-                        <div class="box">
-                            <span>Kafolat</span>
-                            <h3>3 yil</h3>
-                        </div>
-                        <div class="box">
-                            <span>
-                                O’lchami
-                            </span>
-                            <h3>200x120x40</h3>
-                        </div>
-                        <div class="box">
-                            <span>Sig’imi</span>
-                            <h3>2 kishilik</h3>
-                        </div>
-                    </div>
-                    <p class="overview">Penatibus viverra gravida rhoncus in. At turpis morbi ante tortor a est.
-                        Habitant adipiscing ut
-                        sed pulvinar tellus, ut urna, fermentum. Porttitor senectus lorem rhoncus facilisi ac dictum
-                        varius egestas.
-                    </p>
-                    <div class="price">
-                        <span>Narxi</span>
-                        <h3>1 699 999 so'm</h3>
-                    </div>
-                    <button class="btn">
-                        Buyurtma berish
-                    </button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="img-section">
-                    <img src="./images/photo.png" alt="">
-                </div>
-                <div class="info-section">
-                    <h3 class="name">Ortopedik Eko matras</h3>
-                    <div class="some-info">
-                        <div class="box">
-                            <span>Yuklama</span>
-                            <h3>150 kg</h3>
-                        </div>
-                        <div class="box">
-                            <span>Kafolat</span>
-                            <h3>3 yil</h3>
-                        </div>
-                        <div class="box">
-                            <span>
-                                O’lchami
-                            </span>
-                            <h3>200x120x40</h3>
-                        </div>
-                        <div class="box">
-                            <span>Sig’imi</span>
-                            <h3>2 kishilik</h3>
-                        </div>
-                    </div>
-                    <p class="overview">Penatibus viverra gravida rhoncus in. At turpis morbi ante tortor a est.
-                        Habitant adipiscing ut
-                        sed pulvinar tellus, ut urna, fermentum. Porttitor senectus lorem rhoncus facilisi ac dictum
-                        varius egestas.
-                    </p>
-                    <div class="price">
-                        <span>Narxi</span>
-                        <h3>1 699 999 so'm</h3>
-                    </div>
-                    <button class="btn">
-                        Buyurtma berish
-                    </button>
-                </div>
-            </div>
+        <div class="container wrapper-products">
+            
         </div>
     </section>
     <section class="about-process">
         <div class="container">
-            <div class="videos">
+            <div class="videos" id="video-wrapper" >
                 <div class="video">
                     <h3>Memoriform</h3>
                     <div class="video-wrapper">
                         <video poster="./images/1-video.png" class="video-player" data-video-order="0">
-                            <source src="../images/video/kino.mp4">
+                            <source src="./images/video/kino.mp4">
                         </video>
                         <button class="play" data-btn-order="0">
                             <img src="./images/icons/play-button.svg" alt="">
@@ -710,12 +350,12 @@
                     <span>Raqamingizni qoldiring, biz sizga yana qo'ng'iroq qilamiz</span>
                 </div>
                 <div class="right">
-                    <form>
+                    <form id="call-leter">
                         <div class="input-wrapper">
-                            <input type="number" id="code" placeholder="+998" required>
-                            <input type="number" id="number" placeholder="Raqamingizni yozing" required>
+                            <input type="number" id="code" placeholder="+998" disabled>
+                            <input type="number" id="number" minlength="9"  maxlength="10" placeholder="Raqamingizni yozing" required>
                         </div>
-                        <button type="submit" class="btn-active">
+                        <button type="submit" id="submit-call"  class="btn-active">
                             Yuborish
                         </button>
                     </form>

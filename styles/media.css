@@ -139,6 +139,15 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .card-wrapper .container .card .img-section img {
+    width: 288px;
+    height: 133px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .card-wrapper .container .card .info-section {
+    max-width: 100%;
+  }
   .card-wrapper .container .card .some-info .box {
     width: 50%;
   }
